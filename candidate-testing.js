@@ -40,11 +40,16 @@ for (i = 0; i < questions.length; i++) {
 let userInput = input.question (questions[i])
 candidateAnswers.push(userInput);
 }
+console.log(candidateAnswers);
 }    
+
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-
+for (i=0; i<candidateAnswers.length; i++) {
+  console.log(`You answered ${candidateAnswers[i]} and the correct answer is ${correctAnswers[i]}`);
+  console.log("-----------------");
+}
 //I used an if else function to print if the user had the correct answer or not
 
 
