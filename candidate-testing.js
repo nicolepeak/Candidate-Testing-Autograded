@@ -19,14 +19,14 @@ let questions = [
   "Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2? ",
   "What is the minimum crew size for the ISS? "
 ];
-let correctAnswers= [
+let correctAnswers=[
   "Sally Ride",
   "true",
   "40",
   "Trajectory",
   "3"
 ];
-let candidateAnswers = "";
+let candidateAnswers= []
 
 
 function askForName() {
@@ -36,20 +36,16 @@ candidateName = input.question("What is your name? ")
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-for (i = 0; candidateAnswers=true; i++){
-candidateAnswers = input.question (questions[i])
-if (i>3) {break};
+for (i = 0; i < questions.length; i++) {
+let userInput = input.question (questions[i])
+candidateAnswers.push(userInput);
 }
 }    
-    
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-  if (candidateAnswer == "Sally Ride") {
-    console.log("Correct Answer!")
-  } else {
-    console.log ("Incorrect Answer")
-} //I used an if else function to print if the user had the correct answer or not
+
+//I used an if else function to print if the user had the correct answer or not
 
 
   let grade;  //TODO 3.2 use this variable to calculate the candidates score.
