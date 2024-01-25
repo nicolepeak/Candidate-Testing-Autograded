@@ -50,11 +50,16 @@ for (i=0; i<candidateAnswers.length; i++) {
   console.log(`You answered ${candidateAnswers[i]} and the correct answer is ${correctAnswers[i]}`);
   console.log("-----------------");
 }
-//I used an if else function to print if the user had the correct answer or not
-
 
   let grade;  //TODO 3.2 use this variable to calculate the candidates score.
-
+  let numberOfCorrectAnswers = 0 
+  for (let i = 0; i < candidateAnswers.length; i++) {
+    if (correctAnswers[i].toLowerCase() === candidateAnswers[i].toLowerCase()) {
+        numberOfCorrectAnswers++
+      }
+  }
+  grade = numberOfCorrectAnswers/correctAnswers.length * 100
+  console.log(grade);
 
   return grade;
 }
